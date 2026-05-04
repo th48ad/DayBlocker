@@ -1,0 +1,11 @@
+# TWP Day-Blocker — Manual Blocked Dates
+# Format: YYYY-MM-DD (one per line)
+# Lines starting with # are comments
+# Review every Sunday night and add upcoming dangerous dates
+#
+# Examples:
+# 2025-04-02  Trump tariff announcement
+# 2025-07-20  Japan Upper House Election (block Monday)
+# 2025-11-04  US Election Day
+#
+# Copy this file to your MT5 MQL5/Files/ directory

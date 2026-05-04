@@ -1,0 +1,33 @@
+; DayBlocker EA — Recommended defaults for TWP 1% Challenge
+; Flash PMI only (automated), Trump tariffs via blocked_dates.txt (manual)
+;
+; ═══ Event Blocking ═══
+InpBlockFlashPMI=true
+InpBlockTrumpSpeaks=false
+InpBlockFOMCDecision=false
+InpBlockNFP=false
+InpBlockCPI=false
+InpBlockGDP=false
+InpBlockPPI=false
+InpBlockFOMCMinutes=false
+InpBlockPowellSpeaks=false
+InpBlockISM=false
+InpBlockRetailSales=false
+InpBlockEmpireState=false
+;
+; ═══ Manual Block File ═══
+InpUseBlockFile=true
+InpBlockFilePath=blocked_dates.txt
+;
+; ═══ Currency Filter ═══
+InpCurrencies=USD,EUR
+;
+; ═══ Timing ═══
+InpCheckIntervalSec=60
+InpReEnableHourUTC=22
+InpReEnableNextDay=true
+;
+; ═══ Display ═══
+InpShowPanel=true
+InpBlockedColor=255
+InpActiveColor=65280
