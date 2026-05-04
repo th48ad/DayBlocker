@@ -1,1 +1,6 @@
-*.ex5
+# Ignore compiled binaries in root (dev artifacts)
+/*.ex5
+
+# Allow the bin/ folder (precompiled for users who can't compile)
+!bin/
+!bin/*.ex5
