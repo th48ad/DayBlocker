@@ -1,4 +1,4 @@
-; DayBlocker EA — Recommended defaults for TWP 1% Challenge
+; DayBlocker EA v1.20 — Recommended defaults for TWP 1% Challenge
 ; Flash PMI only (automated), Trump tariffs via blocked_dates.txt (manual)
 ;
 ; ═══ Event Blocking ═══
@@ -24,8 +24,13 @@ InpCurrencies=USD,EUR
 ;
 ; ═══ Timing ═══
 InpCheckIntervalSec=60
-InpReEnableHourUTC=22
+InpBrokerGMTOffset=3
+InpReEnableHour=1
 InpReEnableNextDay=true
+;
+; ═══ Testing ═══
+InpTestMode=false
+InpDryRun=false
 ;
 ; ═══ Display ═══
 InpShowPanel=true
