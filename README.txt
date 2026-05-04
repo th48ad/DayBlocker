@@ -36,12 +36,26 @@ INSTALLATION
 1. Copy DayBlocker.mq5 to your MT5 MQL5/Experts/ folder
 2. Open MetaEditor and compile DayBlocker.mq5
 3. Copy blocked_dates.txt to your MT5 MQL5/Files/ folder
-4. Open any chart in MT5 (can be any symbol, any timeframe)
-5. Drag DayBlocker EA onto the chart
+4. Open a NEW, SEPARATE chart in MT5 (see note below)
+5. Drag DayBlocker EA onto that chart
 6. IMPORTANT: Check "Allow DLL imports" in the popup dialog
    (required for toggling the AutoTrading button)
 7. Load the DayBlocker.set file or configure manually
 8. Only ONE instance needed — it controls AutoTrading globally
+
+IMPORTANT — SEPARATE CHART REQUIRED:
+  MT5 only allows ONE EA per chart. You cannot attach DayBlocker
+  to the same chart as TWP ORB EA or any other EA.
+
+  Open a new chart (any symbol, any timeframe) and attach
+  DayBlocker there. I recommend using a 24/7 symbol like ETHUSD
+  or BTCUSD — these always have tick activity which keeps the
+  EA's timer running reliably even outside forex market hours.
+
+  Example setup:
+    Chart 1: EURUSD M5  → TWP ORB EA
+    Chart 2: EURCAD M5  → TWP ORB EA
+    Chart 3: ETHUSD M1  → DayBlocker EA  (separate, always active)
 
 TIMEZONE / BROKER COMPATIBILITY
 ===============================
