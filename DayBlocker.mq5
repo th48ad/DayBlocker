@@ -179,6 +179,15 @@ void OnDeinit(const int reason)
 void OnTimer()
 {
     CheckAndBlock();
+
+    // Refresh news list every 5 minutes (not every 60s — calendar rarely changes intraday)
+    static datetime lastNewsRefresh = 0;
+    if(TimeCurrent() - lastNewsRefresh > 300)
+    {
+        FetchUpcomingNews();
+        lastNewsRefresh = TimeCurrent();
+    }
+
     UpdatePanel();
 }
 
